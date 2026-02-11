@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 195 40% 6%;
+    --foreground: 180 20% 92%;
+
+    --card: 195 35% 10%;
+    --card-foreground: 180 20% 92%;
+
+    --popover: 195 35% 10%;
+    --popover-foreground: 180 20% 92%;
+
+    --primary: 191 72% 21%;
+    --primary-foreground: 180 20% 95%;
+
+    --secondary: 197 59% 33%;
+    --secondary-foreground: 180 20% 95%;
+
+    --muted: 195 30% 15%;
+    --muted-foreground: 180 10% 55%;
+
+    --accent: 45 72% 66%;
+    --accent-foreground: 195 40% 6%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 195 25% 18%;
+    --input: 195 25% 18%;
+    --ring: 191 72% 21%;
+
+    --radius: 0.75rem;
+
+    --earth-teal: 191 72% 21%;
+    --earth-ocean: 197 59% 33%;
+    --earth-forest: 153 43% 30%;
+    --earth-amber: 45 72% 66%;
+    --earth-glow: 191 80% 40%;
+
+    --sidebar-background: 195 35% 8%;
+    --sidebar-foreground: 180 20% 92%;
+    --sidebar-primary: 191 72% 21%;
+    --sidebar-primary-foreground: 180 20% 95%;
+    --sidebar-accent: 195 30% 15%;
+    --sidebar-accent-foreground: 180 20% 92%;
+    --sidebar-border: 195 25% 18%;
+    --sidebar-ring: 191 72% 21%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'IBM Plex Serif', serif;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: 'IBM Plex Serif', serif;
+  }
+  .font-body {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+/* Topographic pattern overlay */
+.topo-pattern {
+  background-image: 
+    radial-gradient(ellipse at 20% 50%, hsl(191 72% 21% / 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, hsl(197 59% 33% / 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 40% 80%, hsl(153 43% 30% / 0.08) 0%, transparent 50%);
+}
+
+/* Atmospheric gradient */
+.atmosphere-gradient {
+  background: linear-gradient(
+    135deg,
+    hsl(195 40% 6%) 0%,
+    hsl(191 72% 12%) 30%,
+    hsl(197 59% 15%) 60%,
+    hsl(195 40% 6%) 100%
+  );
+}
+
+/* Grid overlay effect */
+.grid-overlay {
+  background-image: 
+    linear-gradient(hsl(191 72% 21% / 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(191 72% 21% / 0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(195 40% 6%);
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(195 25% 18%);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(191 72% 21%);
+}
