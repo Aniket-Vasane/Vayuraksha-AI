@@ -4,50 +4,52 @@
 
 @layer base {
   :root {
-    --background: 195 40% 6%;
-    --foreground: 180 20% 92%;
+    /* Base: Soft Platinum / Vintage Gray */
+    --background: 220 10% 94%;
+    /* #E8EAED - Much softer than pure white */
+    --foreground: 240 5% 10%;
+    /* #18181B */
 
-    --card: 195 35% 10%;
-    --card-foreground: 180 20% 92%;
+    /* Card: White (pops against gray bg) */
+    --card: 0 0% 100%;
+    /* #FFFFFF */
+    --card-foreground: 240 5% 10%;
 
-    --popover: 195 35% 10%;
-    --popover-foreground: 180 20% 92%;
+    /* Popover: Pure White */
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 5% 10%;
 
-    --primary: 191 72% 21%;
-    --primary-foreground: 180 20% 95%;
+    /* Primary: Rich Black */
+    --primary: 240 5% 10%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 197 59% 33%;
-    --secondary-foreground: 180 20% 95%;
+    /* Secondary: Light Gray */
+    --secondary: 240 5% 96%;
+    /* #F4F4F5 */
+    --secondary-foreground: 240 5% 10%;
 
-    --muted: 195 30% 15%;
-    --muted-foreground: 180 10% 55%;
+    /* Muted: Light Gray */
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+    /* #71717A */
 
-    --accent: 45 72% 66%;
-    --accent-foreground: 195 40% 6%;
+    /* Accent: Burnt Amber/Orange */
+    --accent: 24 95% 53%;
+    /* #F97316 */
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 210 40% 98%;
+    /* Destructive: Red */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 195 25% 18%;
-    --input: 195 25% 18%;
-    --ring: 191 72% 21%;
+    /* Border: Pale Gray */
+    --border: 240 5% 90%;
+    /* #E4E4E7 */
+    --input: 240 5% 90%;
+    --ring: 240 5% 10%;
 
-    --radius: 0.75rem;
-
-    --earth-teal: 191 72% 21%;
-    --earth-ocean: 197 59% 33%;
-    --earth-forest: 153 43% 30%;
-    --earth-amber: 45 72% 66%;
-    --earth-glow: 191 80% 40%;
-
-    --sidebar-background: 195 35% 8%;
-    --sidebar-foreground: 180 20% 92%;
-    --sidebar-primary: 191 72% 21%;
-    --sidebar-primary-foreground: 180 20% 95%;
-    --sidebar-accent: 195 30% 15%;
-    --sidebar-accent-foreground: 180 20% 92%;
-    --sidebar-border: 195 25% 18%;
-    --sidebar-ring: 191 72% 21%;
+    --radius: 0rem;
+    /* Sharp edges for "Swiss" feel */
   }
 }
 
@@ -61,7 +63,12 @@
     font-family: 'Space Grotesk', sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'IBM Plex Serif', serif;
   }
 }
@@ -70,49 +77,26 @@
   .font-heading {
     font-family: 'IBM Plex Serif', serif;
   }
+
   .font-body {
     font-family: 'Space Grotesk', sans-serif;
   }
 }
 
-/* Topographic pattern overlay */
-.topo-pattern {
-  background-image: 
-    radial-gradient(ellipse at 20% 50%, hsl(191 72% 21% / 0.15) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, hsl(197 59% 33% / 0.1) 0%, transparent 50%),
-    radial-gradient(ellipse at 40% 80%, hsl(153 43% 30% / 0.08) 0%, transparent 50%);
-}
-
-/* Atmospheric gradient */
-.atmosphere-gradient {
-  background: linear-gradient(
-    135deg,
-    hsl(195 40% 6%) 0%,
-    hsl(191 72% 12%) 30%,
-    hsl(197 59% 15%) 60%,
-    hsl(195 40% 6%) 100%
-  );
-}
-
-/* Grid overlay effect */
-.grid-overlay {
-  background-image: 
-    linear-gradient(hsl(191 72% 21% / 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, hsl(191 72% 21% / 0.06) 1px, transparent 1px);
-  background-size: 40px 40px;
-}
-
 /* Scrollbar styling */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
+
 ::-webkit-scrollbar-track {
-  background: hsl(195 40% 6%);
+  background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: hsl(195 25% 18%);
-  border-radius: 3px;
+  background: hsl(var(--border));
+  border-radius: 0px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(191 72% 21%);
+  background: hsl(var(--muted-foreground));
 }
